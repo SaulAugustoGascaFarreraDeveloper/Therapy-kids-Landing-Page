@@ -1,6 +1,12 @@
 'use client';
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
+
+
+const ImageProfile = dynamic(() => import("@/components/ui/image-profile"),{
+  ssr: false,
+})
 
 export default function About() {
   return (
@@ -19,12 +25,11 @@ export default function About() {
                 <div className="w-48 h-48 mx-auto mb-6 relative">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center">
                     
-                     <Image 
-                          src={'https://res.cloudinary.com/dxifyrkhq/image/upload/v1772224204/sofia_annoue.jpg'}
-                          alt="Sofia Profile"
-                          width={210}
-                          height={60}
-                     />
+                     
+
+                     <ImageProfile imageUrl="https://res.cloudinary.com/dxifyrkhq/image/upload/v1772493242/sofia_therapy1_pbufxx.jpg" />
+
+                     
                   </div>
 
                   {/* Floating decorations */}

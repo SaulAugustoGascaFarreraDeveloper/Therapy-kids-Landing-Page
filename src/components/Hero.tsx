@@ -1,6 +1,15 @@
 'use client';
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
+
+
+
+
+const ImageProfile = dynamic(() => import("@/components/ui/image-profile"),{
+  ssr: false,
+})
+
 
 export default function Hero() {
   return (
@@ -116,14 +125,13 @@ export default function Hero() {
                   <path d="M50 70 Q100 30 150 70" stroke="#F5A5B8" strokeWidth="12" fill="none" strokeLinecap="round" />
                 </svg> */}
 
+               
+
                 <div className="flex items-center justify-center">
-                    <Image 
-                      src={'https://res.cloudinary.com/dxifyrkhq/image/upload/v1772224204/sofia_annoue.jpg'}
-                      alt="Sofia Profile"
-                      width={210}
-                      height={60}
-                    />
+                    <ImageProfile imageUrl="https://res.cloudinary.com/dxifyrkhq/image/upload/v1772493242/sofia_therapy1_pbufxx.jpg" />
                 </div>
+
+                
 
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-gray-800 mb-2">Therapy Kids</h2>
