@@ -1,6 +1,6 @@
 export default function FloatingWhatsApp() {
 
-    const message = "Hola 👋🏼, quisiera conocer más sobre los servicios de Therapy Kids 🌈";
+    const message = "Hola, quisiera conocer más sobre los servicios de Therapy Kids.";
 
     const url = `https://wa.me/524428192020?text=${encodeURIComponent(message)}`;
   return (
